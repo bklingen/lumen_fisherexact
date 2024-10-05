@@ -1,0 +1,12 @@
+name: lumen_fisherexact
+title: lumen_fisherexact
+username: lumen-stage
+account: lumen-stage
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12928884
+bundleId: 9185426
+url: https://lumen-stage.shinyapps.io/lumen_fisherexact/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
