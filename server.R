@@ -14,6 +14,54 @@ PvalRound <- function(p, plotLabel=FALSE) {
 
 shinyServer(function(input, output, session) {
   
+  # ## Initial Pop-up
+  # observe({
+  #   showModal(
+  #     modalDialog(
+  #       title = HTML("
+  #         <h4>Conduct Inference on your phone with the <b>Art of Stat: Inference</b> mobile app!</h4>
+  #         "),
+  #       tags$div(
+  #         style = "display: flex; flex-wrap: wrap; gap: 5px;",
+  #         
+  #         tags$div(
+  #           style = "flex: 1;",
+  #           tags$a(href = 'https://artofstat.com/mobile-apps',
+  #                  tags$img(src = "app-inference.png", width = "140", class = "rounded-corners")),
+  #           tags$br(),
+  #           tags$br(),
+  #           tags$a(href = 'https://apps.apple.com/us/app/art-of-stat-resampling/id6448982230?platform=iphone',
+  #                  tags$img(src = "AppStoreLogoApple.png", width = "140")),
+  #           tags$br(),
+  #           tags$br(),
+  #           tags$a(href = 'https://play.google.com/store/apps/details?id=com.artofstat.resampling',
+  #                  tags$img(src = "AppStoreLogoAndroid1.png", width = "140"))
+  #         ),
+  #         
+  #         tags$div(
+  #           style = "flex: 1.2;",
+  #           tags$a(href = 'https://artofstat.com/mobile-apps',
+  #                  tags$img(src = "IMG-1508.PNG", width = "190", class = "rounded-corners"))
+  #         ),
+  #         
+  #         tags$div(
+  #           style = "flex: 1.2;",
+  #           tags$a(href = 'https://artofstat.com/mobile-apps',
+  #                  tags$img(src = "IMG-1519.PNG", width = "190", class = "rounded-corners"))
+  #         )
+  #       ),
+  #       footer = tagList(
+  #         HTML("<big>New: Upload CSV files to app. Search for <b>Art of Stat</b> in the App Store.<br>For more information, including screenshots, <a href=https://artofstat.com/mobile-apps>check here</a>.</big> <br>"), 
+  #         tags$br(),
+  #         modalButton("Dismiss")
+  #       ),
+  #       size = "m", #c("m", "s", "l"),
+  #       easyClose = TRUE,
+  #       fade = TRUE
+  #     )
+  #   )
+  # })  
+  
   tableComplete <- reactiveVal(FALSE)
 
   observeEvent(list(input$how, input$dataset), {

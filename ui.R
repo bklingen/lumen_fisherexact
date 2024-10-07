@@ -92,20 +92,16 @@ shinyUI(
           column(6, awesomeCheckbox("sampDist", "Sampling Distribution"))
         ),
         downloadButton("save", "Download Graph", style = "font-size: 12px; padding: 2px 10px;"),
+        
         tags$hr(class = "custom-hr"),
         #tags$br(),
-        h5(tags$b("Available on mobile:")),
+        h5(tags$b("Available on Mobile:")),
         div(class="row",
-            # div(class="column1",
-            #     a(img(src="IconArtofStat.png", width = "85px", class = "rounded-corners"), 
-            #       href='https://artofstat.com/mobile-apps', 
-            #       target="_blank"),
-            # ),
             div(class="column1",
-                a(img(src="IconInference512.png", width = "85px", class = "rounded-corners"), 
+                a(img(src="app-inference.png", width = "85px", class = "rounded-corners"), 
                   href='https://artofstat.com/mobile-apps', 
                   target="_blank"),
-            )
+            ),
             # div(class="column2",
             #     a(img(src="AppStoreLogoApple.png", width="125px"), 
             #       href='https://apps.apple.com/us/app/art-of-stat-explore-data/id1599474757?platform=iphone', 
@@ -114,13 +110,16 @@ shinyUI(
             #     a(img(src="AppStoreLogoAndroid1.png",width="125px",class="image2"), 
             #       href='https://play.google.com/store/apps/details?id=com.artofstat.exploredata', 
             #       target="_blank"
-            #       ),
+            #     ),
             # )
         ),
         tags$p(
           "More information ",
           tags$a(href = "https://artofstat.com/mobile-apps", "here.", target="_blank")
-        )
+        ),
+        # h5(tags$b("Check out our textbook:")),
+        # a(img(src='textbookFullCover.png', width="150px"), href='http://www.artofstat.com'),     
+        
     ),  #end sidebarpanel
     mainPanel(
       fluidRow(
